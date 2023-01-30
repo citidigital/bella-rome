@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import $ from 'jquery';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -10,6 +11,12 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+$('#bella').click(function() {
+  alert('clicked')
+  // document.getElementById("bella").style.display="none";
+  // document.getElementById("wink").style.display="block"
+});
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

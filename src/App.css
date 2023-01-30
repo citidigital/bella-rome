@@ -1,5 +1,15 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0D0F11;
+}
+
 .App {
-  text-align: center;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 .App-logo {
@@ -34,5 +44,12 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* mobile screens */
+@media screen and (max-width: 720px) {
+  body {
+      background-color: #000000;
   }
 }
