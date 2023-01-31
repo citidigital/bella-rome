@@ -205,13 +205,13 @@ const animateSocialsRight = () => {
   
 export const animate = () => {
     animateProgress();
-    // animateHeart();
-    // aimateGradientBG();
-    // animatePageLoad();
+    animateHeart();
+    aimateGradientBG();
+    animatePageLoad();
     // showBella();
-    // animateBella();
-    // fadeLogoIn();
-    // animateOncomingCar();
-    // animateSocialsLeft();
-    // animateSocialsRight();
+    animateBella();
+    fadeLogoIn();
+    animateOncomingCar();
+    animateSocialsLeft();
+    animateSocialsRight();
 }
