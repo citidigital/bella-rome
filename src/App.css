@@ -4,13 +4,13 @@ body {
 }
 
 .App {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
-img {
+/* img {
   width: 100%;
   height: auto;
-}
+} */
 
 .App-logo {
   height: 40vmin;

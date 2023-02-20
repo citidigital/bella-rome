@@ -53,7 +53,7 @@ const animateHeart = () => {
 }
 
 const aimateGradientBG = () => {
-    gsap.set(".gradient-bg", {display: "block"})
+    gsap.set(".gradient-bg", {display: "block", delay: 3})
     gsap.to(".gradient-bg", 2, {
         yPercent: -100,
         opacity: 1,

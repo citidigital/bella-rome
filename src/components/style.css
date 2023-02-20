@@ -87,7 +87,7 @@
     height: 100vh;
     position: absolute;
     top: 100%;
-    /* display: none; */
+    display: none;
 }
 
 #bella_logo {
