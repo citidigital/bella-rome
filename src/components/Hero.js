@@ -24,7 +24,7 @@ const Hero = ({isMobile}) => {
                 <p className='experience-text white-text'>
                 <span className='progress white-text italic-regular'><CountUp end={100} duration={3} />%</span><span className='line-1'>YOUR</span><br/><span className='line-2'>WEB EXPERIENCE{isMobile && <br/>} IS</span>{!isMobile && <br/>} <span className='line-3'>LOADING RIGHT <span id='now' className='transparent-text'><span id='now-red-heart'><img src={redHeartEmoji} /></span><span className='now-text'>NOW</span></span></span></p>
 
-                <p className='wait-text white-text'>Please wait <br/> a few seconds.</p>
+                <p className='wait-text white-text'>Please wait a few seconds.</p>
             </div>
             <div className='gradient-bg'>
                 <img src={loading_bg} />
