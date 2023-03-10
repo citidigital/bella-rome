@@ -72,7 +72,6 @@
     right: -61.54px;
 }
 
-
 #now-red-heart img {
     width: 77px;
     height: 77px;
@@ -113,6 +112,17 @@
 
 #socials_right {
     display: none;
+}
+
+#snapchat_link path {
+  -webkit-transition: fill 0.5s ease-out;
+  -moz-transition: fill 0.5s ease-out;
+  -o-transition: fill 0.5s ease-out;
+  transition: fill 0.5s ease-out;
+}
+
+#snapchat_link:hover path {
+    fill: #FCEA2B;
 }
 
 #socials_left {
