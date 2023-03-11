@@ -114,7 +114,8 @@
     display: none;
 }
 
-#snapchat_link path {
+#snapchat_link path,
+#facebook_link path {
   -webkit-transition: fill 0.5s ease-out;
   -moz-transition: fill 0.5s ease-out;
   -o-transition: fill 0.5s ease-out;
@@ -123,6 +124,15 @@
 
 #snapchat_link:hover path {
     fill: #FCEA2B;
+}
+
+#facebook_link:hover .text,
+#facebook_link:hover .f-vector {
+    fill: #FFFFFF;
+}
+
+#facebook_link:hover .circle-vector {
+    fill: #1877F2;
 }
 
 #socials_left {
