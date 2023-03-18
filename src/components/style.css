@@ -117,7 +117,8 @@
 #snapchat_link path,
 #facebook_link path,
 #tiktok_link path,
-#instagram_link path {
+#instagram_link path,
+#twitter_link path {
   -webkit-transition: fill 0.5s ease-out;
   -moz-transition: fill 0.5s ease-out;
   -o-transition: fill 0.5s ease-out;
@@ -172,6 +173,22 @@
 
 #instagram_link:hover .vector_1 {
     fill: "url(#paint0_radial_62_139)";
+}
+
+#twitter_link:hover .text {
+    fill: #FFFFFF;
+}
+
+#twitter_link .twitter_stroke {
+    display: none;
+}
+
+#twitter_link:hover .twitter_stroke {
+    display: block;
+}
+
+#twitter_link:hover .twitter_logo {
+    fill: #55ACEE;
 }
 
 #socials_left {
