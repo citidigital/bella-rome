@@ -116,7 +116,8 @@
 
 #snapchat_link path,
 #facebook_link path,
-#tiktok_link path {
+#tiktok_link path,
+#instagram_link path {
   -webkit-transition: fill 0.5s ease-out;
   -moz-transition: fill 0.5s ease-out;
   -o-transition: fill 0.5s ease-out;
@@ -147,6 +148,30 @@
 
 #tiktok_link:hover .vector_1 {
     fill: #FF004F;
+}
+
+#instagram_link:hover .text,
+#instagram_link:hover .vector_3 {
+    fill: #FFFFFF;
+}
+
+#instagram_link:hover .vector_1,
+#instagram_link:hover .vector_2 {
+    display: none;
+}
+
+#instagram_link .vector_1_hovered,
+#instagram_link .vector_2_hovered {
+    display: none;
+}
+
+#instagram_link:hover .vector_1_hovered,
+#instagram_link:hover .vector_2_hovered {
+    display: block;
+}
+
+#instagram_link:hover .vector_1 {
+    fill: "url(#paint0_radial_62_139)";
 }
 
 #socials_left {
