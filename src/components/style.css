@@ -118,15 +118,21 @@
 #facebook_link path,
 #tiktok_link path,
 #instagram_link path,
-#twitter_link path {
+#twitter_link path,
+#free_trial_link path {
   -webkit-transition: fill 0.5s ease-out;
   -moz-transition: fill 0.5s ease-out;
   -o-transition: fill 0.5s ease-out;
   transition: fill 0.5s ease-out;
 }
 
-#snapchat_link:hover path {
+#snapchat_link:hover path,
+#free_trial_link:hover .text {
     fill: #FCEA2B;
+}
+
+#free_trial_link:hover .gift {
+    fill: #DD2335;
 }
 
 #facebook_link:hover .text,
