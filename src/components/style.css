@@ -91,6 +91,10 @@
     display: none;
 }
 
+#mobile_cactus2 {
+    translate: 5% 0%;
+}
+
 #bella_logo {
     /* display: none; */
 }
@@ -98,6 +102,11 @@
 #page_load,
 #page_load_mobile {
     display: none;
+}
+
+#page_load_mobile #wink {
+    display: none;
+    translate: 2.75% 0%;
 }
 
 #bella {

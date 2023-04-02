@@ -55,7 +55,7 @@ const animateHeart = () => {
 const aimateGradientBG = () => {
     gsap.set(".gradient-bg", {display: "block", delay: 3})
     gsap.to(".gradient-bg", 2, {
-        yPercent: -125,
+        yPercent: window.innerWidth > 720 ? -100 : -125,
         opacity: 1,
         yoyo: true,
         repeat: 0,
@@ -143,12 +143,38 @@ const animateOncomingCar = () => {
     });
 }
 
+const animateBellaMobile = () => {
+    gsap.set("#bella_mobile", {display: "block", x:"-242px"});
+    gsap.to("#bella_mobile", 0.5, {
+        translateX: "3%",
+        yoyo: true, 
+        ease: "slow.out",
+        delay: 6.55
+    });
+    gsap.to("#wink", 0.5, {
+        translateX: "3%",
+        display: "block",
+        yoyo: true, 
+        // repeat: 5,
+        ease: "slow.out",
+        delay: 8.1
+    });
+    gsap.to("#wink", 0.5, {
+        translateX: "3%",
+        display: "none",
+        yoyo: true, 
+        // repeat: 5,
+        ease: "slow.out",
+        delay: 9.5
+    });
+}
+
 const fadeLogoIn = () => {
     if(window.innerWidth > 720) {
         gsap.fromTo("#bella_logo", {opacity: 0}, {opacity: 1, duration: 1, ease: 'slow.out', delay: 10.65})
     }   else {
         gsap.fromTo("#bella_logo_mobile", {opacity: 0}, {opacity: 1, duration: 1, ease: 'slow.out', delay: 10.65})
-        gsap.fromTo("#bella_mobile", {opacity: 0}, {opacity: 1, duration: 1, ease: 'slow.out', delay: 10.65})
+        // gsap.fromTo("#bella_mobile", {opacity: 0}, {opacity: 1, duration: 1, ease: 'slow.out', delay: 6.5})
     }
 }
 
@@ -177,7 +203,7 @@ const animateSocialsRight = () => {
 }
 
 const animateSocialsMobile = () => {
-    gsap.set("#socials_mobile", {display: "block", opacity: 0,  transformOrigin: "50% 50%" ,scale: 0.4, rotate: "45deg", translate: "0% 21%"});
+    gsap.set("#socials_mobile", {display: "block", opacity: 0,  transformOrigin: "50% 50%" ,scale: 0.4, rotate: "45deg", translate: "5% 21%"});
     gsap.to("#socials_mobile", 1, {
         rotate: 0,
         opacity: 1,
@@ -240,13 +266,15 @@ export const animate = () => {
     aimateGradientBG();
     animatePageLoad();
     // showBella();
-    animateBella();
-    fadeLogoIn();
     if(window.innerWidth > 720) {
+        animateBella();
+        fadeLogoIn();
         animateOncomingCar();
         animateSocialsLeft();
         animateSocialsRight();
     }   else {
+        animateBellaMobile();
+        fadeLogoIn();
         animateSocialsMobile();
     }
 }
