@@ -95,9 +95,9 @@
     /* display: none; */
 }
 
-#page_load {
+#page_load,
+#page_load_mobile {
     display: none;
-    /* opacity: 0.5; */
 }
 
 #bella {
@@ -181,6 +181,22 @@
     fill: "url(#paint0_radial_62_139)";
 }
 
+#instagram_link_mobile #instagram_logo_hovered {
+    display: none;
+}
+
+#instagram_link_mobile:hover .text {
+    fill: #FFFFFF;
+}
+
+#instagram_link_mobile:hover #instagram_logo {
+    display: none;
+}
+
+#instagram_link_mobile:hover #instagram_logo_hovered {
+    display: block;
+}
+
 #twitter_link:hover .text {
     fill: #FFFFFF;
 }
@@ -227,16 +243,29 @@
 /* mobile screens */
 @media screen and (max-width: 720px) {
     .hero {
-        padding: 4rem 0;
+        /* padding: 4rem 0; */
         background-color: #000000;
     }
 
     .logo-container {
         display: block;
+        margin-top: 4rem;
     }
 
-    .hero-text{
+    /* .hero-text{
         margin: 0 21px 0 16px;
+    } */
+
+    .hero-text {
+        width: 100%;
+        position: absolute;
+        left: 1rem;
+        top: 35%;
+        z-index: 999;
+    }
+
+    .line-1 {
+        transform: translate(0);
     }
 
     .progress {
@@ -245,18 +274,28 @@
         font-size: 19.9px;
         line-height: 27px;
     }
+
     .experience-text {
         font-weight: 600;
         font-size: 28px;
         line-height: 34px;
         position: relative;
     }
+
+    .now-text {
+        font: italic 30px 'Fraunces', serif;
+        font-weight: 400;
+        line-height: 37px;
+    }
+
     #now {
         line-height: 41px;
     }
+
     .wait-text {
         font-size: 12px;
         line-height: 15px;
+        margin-top: 2.5rem;
     }
     #now-red-heart {
         right: -13px;

@@ -55,7 +55,7 @@ const animateHeart = () => {
 const aimateGradientBG = () => {
     gsap.set(".gradient-bg", {display: "block", delay: 3})
     gsap.to(".gradient-bg", 2, {
-        yPercent: -100,
+        yPercent: -125,
         opacity: 1,
         yoyo: true,
         repeat: 0,
@@ -65,6 +65,9 @@ const aimateGradientBG = () => {
         gsap.set(".hero-text", {
             display: "none"
         })
+        gsap.set(".logo-container", {
+            display: "none"
+        })
         gsap.set(".gradient-bg", {
             display: "none"
         })
@@ -72,15 +75,26 @@ const aimateGradientBG = () => {
 }
 
 const animatePageLoad = () => {
-    // gsap.set(".gradient-bg", {display: "none"});
-    gsap.set("#page_load", {display: "block", opacity: 0});
-    gsap.to("#page_load", 1, {
-        opacity: 1,
-        yoyo: true, 
-        repeat: 0,
-        ease: "power4.out",
-        delay: 5.5
-    });
+    if(window.innerWidth > 720) {
+        gsap.set("#page_load", {display: "block", opacity: 0});
+        gsap.to("#page_load", 1, {
+            opacity: 1,
+            yoyo: true, 
+            repeat: 0,
+            ease: "power4.out",
+            delay: 5.5
+        });
+    } else {
+        gsap.set("#page_load_mobile", {display: "block", opacity: 0});
+        gsap.to("#page_load_mobile", 1, {
+            opacity: 1,
+            yoyo: true, 
+            repeat: 0,
+            ease: "power4.out",
+            delay: 5.5
+        });
+    }
+    gsap.set(".gradient-bg", {display: "none"});
 }
 
 const showBella = () => {
@@ -130,7 +144,12 @@ const animateOncomingCar = () => {
 }
 
 const fadeLogoIn = () => {
-    gsap.fromTo("#bella_logo", {opacity: 0}, {opacity: 1, duration: 1, ease: 'slow.out', delay: 10.65})
+    if(window.innerWidth > 720) {
+        gsap.fromTo("#bella_logo", {opacity: 0}, {opacity: 1, duration: 1, ease: 'slow.out', delay: 10.65})
+    }   else {
+        gsap.fromTo("#bella_logo_mobile", {opacity: 0}, {opacity: 1, duration: 1, ease: 'slow.out', delay: 10.65})
+        gsap.fromTo("#bella_mobile", {opacity: 0}, {opacity: 1, duration: 1, ease: 'slow.out', delay: 10.65})
+    }
 }
 
 const animateSocialsLeft = () => {
@@ -154,6 +173,18 @@ const animateSocialsRight = () => {
         translateY: "-32%",
         ease: "power1.out",
         delay: 11.65
+    });
+}
+
+const animateSocialsMobile = () => {
+    gsap.set("#socials_mobile", {display: "block", opacity: 0,  transformOrigin: "50% 50%" ,scale: 0.4, rotate: "45deg", translate: "0% 21%"});
+    gsap.to("#socials_mobile", 1, {
+        rotate: 0,
+        opacity: 1,
+        scale: 1,
+        translateY: "-32%",
+        ease: "power1.out",
+        delay: 10.65
     });
 }
 
@@ -211,7 +242,11 @@ export const animate = () => {
     // showBella();
     animateBella();
     fadeLogoIn();
-    animateOncomingCar();
-    animateSocialsLeft();
-    animateSocialsRight();
+    if(window.innerWidth > 720) {
+        animateOncomingCar();
+        animateSocialsLeft();
+        animateSocialsRight();
+    }   else {
+        animateSocialsMobile();
+    }
 }
