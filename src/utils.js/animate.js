@@ -152,7 +152,7 @@ const animateBellaMobile = () => {
         delay: 6.55
     });
     gsap.to("#wink", 0.5, {
-        translateX: "3%",
+        // translateX: "3%",
         display: "block",
         yoyo: true, 
         // repeat: 5,
@@ -160,7 +160,7 @@ const animateBellaMobile = () => {
         delay: 8.1
     });
     gsap.to("#wink", 0.5, {
-        translateX: "3%",
+        // translateX: "3%",
         display: "none",
         yoyo: true, 
         // repeat: 5,
